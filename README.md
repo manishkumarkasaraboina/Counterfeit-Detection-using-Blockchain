@@ -273,14 +273,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - QRCode.js for QR code generation
 - Express.js team for the web framework
 
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](../../issues) page
-2. Create a new issue with detailed information
-3. Contact the development team
 
 ---
 
-**Note**: This is a demonstration project. For production use, consider additional security measures, gas optimization, and proper testing on testnets before mainnet deployment.
