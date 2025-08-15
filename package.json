@@ -1,0 +1,42 @@
+{
+  "name": "fake-product-identification",
+  "version": "1.0.0",
+  "description": "Blockchain-powered fake product identification system",
+  "main": "src/index.js",
+  "scripts": {
+    "setup": "node setup.js",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "deploy": "cd my-dapp && npx hardhat run scripts/deploy.js --network localhost",
+    "node": "cd my-dapp && npx hardhat node",
+    "compile": "cd my-dapp && npx hardhat compile",
+    "test": "cd my-dapp && npx hardhat test"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "solidity",
+    "product-authentication",
+    "dapp",
+    "qr-code"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "ethers": "^6.15.0",
+    "express": "^4.18.2",
+    "hardhat-gas-reporter": "^2.3.0",
+    "solidity-coverage": "^0.8.16"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "dotenv": "^17.2.1",
+    "hardhat": "^2.26.1",
+    "html5-qrcode": "^2.2.0",
+    "lite-server": "^2.6.1",
+    "nodemon": "^3.0.1"
+  }
+}

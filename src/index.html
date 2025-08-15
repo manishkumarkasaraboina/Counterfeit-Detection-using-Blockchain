@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fake Product Identification DApp</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔐 Fake Product Identification DApp</h1>
+      <p class="subtitle">Blockchain-powered product authentication system</p>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="manufacturer">🏭 Manufacturer</button>
+      <button class="tab-btn" data-tab="seller">🏪 Seller</button>
+      <button class="tab-btn" data-tab="consumer">👤 Consumer</button>
+    </nav>
+
+    <!-- Manufacturer Section -->
+    <div class="tab-content active" id="manufacturer">
+      <div class="form-section">
+        <h2>🏭 Register Manufacturer</h2>
+        <form id="registerManufacturerForm">
+          <input type="text" id="manufacturerId" placeholder="Manufacturer ID" required />
+          <input type="text" id="manufacturerName" placeholder="Manufacturer Name" required />
+          <button type="submit">Register Manufacturer</button>
+        </form>
+        <div id="manufacturerResult"></div>
+      </div>
+
+      <div class="form-section">
+        <h2>📦 Register Product</h2>
+        <form id="registerProductForm">
+          <input type="text" id="productManufacturerId" placeholder="Manufacturer ID" required />
+          <input type="text" id="productName" placeholder="Product Name" required />
+          <input type="text" id="serialNumber" placeholder="Serial Number" required />
+          <input type="number" id="price" placeholder="Price (ETH)" step="0.001" required />
+          <input type="text" id="brand" placeholder="Brand" required />
+          <button type="submit">Register Product</button>
+        </form>
+        <div id="qrCode"></div>
+        <div id="productResult"></div>
+      </div>
+    </div>
+
+    <!-- Seller Section -->
+    <div class="tab-content" id="seller">
+      <div class="form-section">
+        <h2>🏪 Register as Seller</h2>
+        <form id="addSellerForm">
+          <input type="text" id="sellerCode" placeholder="Seller Code" required />
+          <input type="text" id="sellerName" placeholder="Seller Name" required />
+          <input type="text" id="brandSeller" placeholder="Product Brand" required />
+          <button type="submit">Register as Seller</button>
+        </form>
+        <div id="sellerResult"></div>
+      </div>
+    </div>
+
+    <!-- Consumer Section -->
+    <div class="tab-content" id="consumer">
+      <div class="form-section">
+        <h2>🔍 Verify Product</h2>
+        <form id="verifyProductForm">
+          <input type="text" id="verifyProductId" placeholder="Enter Product Serial Number or Scan QR" required />
+          <button type="submit">Verify Product</button>
+        </form>
+        <div id="verificationResult"></div>
+      </div>
+    </div>
+
+    <!-- Status Section -->
+    <div class="status-section">
+      <h3>📊 System Status</h3>
+      <div id="systemStatus">
+        <p>🔗 Blockchain: <span id="blockchainStatus">Connecting...</span></p>
+        <p>📝 Contract: <span id="contractStatus">Initializing...</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
